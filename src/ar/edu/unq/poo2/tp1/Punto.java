@@ -22,4 +22,8 @@ public class Punto {
 		this.y = y;
 	}
 	
+	public float constante(float x) {
+		return x;
+	}
 }
+
