@@ -31,11 +31,11 @@ class ExpresionesTestCase {
 	@Test
 	void testLenghtT() {
 		try {
-			assertEquals(0 , t.length());
+			assertEquals(0, t.length());
 		} catch (Exception e){
 			fail("Excepción resultante: " + e);
 		}
-		//Rtdo: 0, ¿string vacío?.
+		//Rtdo: NullPointerException, t es null y no puede invocar a length().
 	}
 	
 	@Test
