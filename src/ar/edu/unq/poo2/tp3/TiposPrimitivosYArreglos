@@ -1,0 +1,61 @@
+***Tipos Primitivos***
+
+1) Los tipos primitivos en Java son:
+	-byte: entero de 8 bits con signo (-128 a 127)
+	-short: entero de 16 bits con signo (-32768 a 32767)
+	-int: entero de 32 bits con signo (rango mucho más amplio)
+	-long: entero de 64 bits con signo (el rango más amplio disponible)
+	-float: numero de plunto flotante de 32 bits precisión simple
+	-double: numero de plunto flotante de 64 bits precisión doble 
+	-boolean: booleano con únicos valores True o False
+	-char: carácter unicode de 16 bits
+	
+2) int es un tipo primitivo, mientras que Interger es una clase. 
+Ambos permiten representar numeros enteros, pero uno sera un tipo de dato primitivo y el otro un objeto.
+Esto implica e influye en el uso de métodos y mensajes. 
+
+3) Valor predeterminado int=0, Integer=null (entra en la categoría any other object).
+
+4) Las variables de método deben se inicializadas con un valor asignado. No poseen valores predeterminados.
+
+
+***Arreglos***
+
+Pueden ser de 1 o más dimensiones. Tener en cuenta que se tratan como instancia de objetos.
+Esto implica que hay una etapa de declaración y una etapa de inicialización.
+Declaración:
+	int[] arregloEnteros   ---> se declara un arreglo unidimensional de elementos tipo int.
+	int[][] matrizEnteros  ---> se declara un arreglo bidimensional de elementos tipo int.
+	
+Inicialización:
+	arregloEnteros = new int[5] --> se inicializa arreglo de 5 elementos, con el valor predeterminado
+									del tipo declarado; en este caso 0, [0, 0, 0, 0, 0].
+									
+	matrizEnteros = new int[5][4] --> se inicializa una matriz de 5 filas y 4 columnas, con 20 elementos
+									 con el valor predeterminado del tipo declarado; en este caso 0.
+									 [0, 0, 0, 0]
+									 [0, 0, 0, 0]
+									 [0, 0, 0, 0]
+									 [0, 0, 0, 0]
+									 
+Acceso:
+	arregloEnteros[index]  ---> retorna el valor encontrado en la posición dada por index.
+	arregloEnteros[index] = n ---> se asigna el valor de n al elemento en la posición dada por index. 
+	
+	matrizEnteros[fila][columna] ---> retorna el valor encontrado en la fila dada, en la columna dada. 
+	matrizEnteros[fila][columna] = n ---> se asigna el valor de n al elemento en la posicion dada por fila y columna.
+	
+	*Tener en cuenta que siempre que se intente acceder a un índice, fila o columna inexistente resultará en un error.
+		Ejemplo: 
+			int[] numeros 
+			numeros = new int[3]
+			numeros[3] = n  ---> 3 no es una posición válida para el arreglo numeros. 
+								Recordar que las posiciones se cuentan a partir de 0.
+								elementos-->[x, y, z]
+								posiciones->[0, 1, 2]
+								
+	*Este comportamiento es igual para todos los arreglos, sin importar las dimensiones. 
+	 Los límites válido están dados por los elementos de cada dimensión, y la cantidad de dimensiones.
+								
+
+									 
